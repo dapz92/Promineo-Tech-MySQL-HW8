@@ -1,13 +1,4 @@
 use employees;
-show tables;
-desc departments;
-desc current_dept_emp;
-desc salaries;
-desc dept_emp;
-desc dept_emp_latest_date;
-desc dept_manager;
-desc employees;
-desc titles;
 select titles.title, count(titles.title) as employee_count 
 from titles inner join employees on titles.emp_no = employees.emp_no where employees.birth_date > "1965-01-01" group by titles.title;
 select titles.title, round(avg(salaries.salary), 2) as avg_salary 
